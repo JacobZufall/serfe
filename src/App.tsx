@@ -1,27 +1,29 @@
 import React, {useState} from "react";
+import Dashboard from "./workspaces/Dashboard";
+import TrialBalance from "./workspaces/TrialBalance";
 import "./App.css";
 
-function Workspace({newSelection}: {newSelection: number}) {
+function Workspace({newSelection}: {newSelection: number}): React.JSX.Element {
   // Each workspace should have its own case, which is imported from another file.
   switch (newSelection) {
     case 1:
       return (
-          <h1>Case 1</h1>
+          <TrialBalance />
       );
 
     // For safety, we'll default to the dashboard, which should be thought of as "case 0".
     default:
       return (
-          <h1>Case 0</h1>
+          <Dashboard />
       );
   }
 }
 
 // The main application.
-function App() {
+function App(): React.JSX.Element {
   const [selection, setSelection]: [number, (value: (((prevState: number) => number) | number)) => void] = useState(0);
 
-  function updateSelection(newSelection: number) {
+  function updateSelection(newSelection: number): void {
     setSelection(newSelection);
   }
 
