@@ -1,38 +1,94 @@
-.App {
-  text-align: center;
+:root {
+  --color1: ;
+  --color2: ;
+  --color3: ;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* The plan is to have 4 themes for the user to select from.
+ Default: The regular theme (light mode).
+ Pure: The dark mode theme.
+ Melo: A bluish theme meant to emulate midnight.
+ Solar: A light but warm theme. */
+
+.pure {
+  --color1: ;
+  --color2: ;
+  --color3: ;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.melo {
+  --color1: ;
+  --color2: ;
+  --color3: ;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.solar {
+  --color1: ;
+  --color2: ;
+  --color3: ;
+}
+
+html {
+  overflow: hidden;
+}
+
+body {
+  background-image: url("test_background.jpg");
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 60px;
+  column-gap: 15px;
+
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 15px;
+}
+
+nav {
+  background: rgba(100, 100, 100, 0.75);
   color: white;
+
+  grid-row-start: 1;
+  grid-row-end: 1;
+  grid-column-start: 1;
+  grid-column-end: 1;
+
+  border-radius: 15px;
 }
 
-.App-link {
-  color: #61dafb;
+.navButton {
+  background-color: aqua;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 10px auto auto;
+
+  width: 40px;
+  height: 40px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#workspace {
+  background: rgba(100, 100, 100, 0.75);
+
+  grid-row-start: 1;
+  grid-row-end: 1;
+  grid-column-start: 2;
+  grid-column-end: 2;
+
+  display: flex;
+  border-radius: 15px;
+}
+
+#safezone {
+  background-color: darkgray;
+  position: static;
+  margin: 20px;
+  width: 100%
 }
