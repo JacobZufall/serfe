@@ -16,3 +16,5 @@ This will build the application to the `~/build/` folder.
 
 ### `npm start`
 This runs the app in development mode right on your desktop.
+
+![Alt](https://repobeats.axiom.co/api/embed/fd57ae5b1a456819975ab2f2aa2f4d9212fef052.svg "Repobeats analytics image")
