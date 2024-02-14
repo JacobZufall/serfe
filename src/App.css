@@ -33,7 +33,7 @@ html {
 }
 
 body {
-  background-image: url("test_background.jpg");
+  background: url("test_background.jpg");
 }
 
 .wrapper {
