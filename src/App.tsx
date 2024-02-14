@@ -27,30 +27,20 @@ function Workspace({newSelection}: WorkspaceProps): React.JSX.Element {
   // Each workspace should have its own case, which is imported from another file.
   switch (newSelection) {
     case 1:
-      return (
-          <Journal />
-      );
+      return (<Journal />);
 
     case 2:
-      return (
-          <TrialBalance />
-      );
+      return (<TrialBalance />);
 
     case 3:
-      return (
-          <BalanceSheet />
-      );
+      return (<BalanceSheet />);
 
     case 4:
-      return (
-          <IncomeStatement />
-      );
+      return (<IncomeStatement />);
 
     // For safety, we'll default to the dashboard, which should be thought of as "case 0".
     default:
-      return (
-          <Dashboard />
-      );
+      return (<Dashboard />);
   }
 }
 
