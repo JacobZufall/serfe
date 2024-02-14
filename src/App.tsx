@@ -43,7 +43,7 @@ function App(): React.JSX.Element {
    * Changes the selection. This enables me to use setSelection() more than once.
    * @param newSelection The desired workspace to switch to.
    */
-  function updateSelection(newSelection: number) {
+  function updateSelection(newSelection: number): void {
     setSelection(newSelection);
   }
 
@@ -55,8 +55,8 @@ function App(): React.JSX.Element {
       <body>
         <div className="wrapper">
           <nav>
-            <NavButton icon={"./src/resources/icons/dashboard.png"} btnCmd={updateSelection} btnState={0} />
-            <NavButton icon={"src/resources/icons/dashboard.png"} btnCmd={updateSelection} btnState={1} />
+            <NavButton icon={"../public/resources/icons/dashboard.png"} btnCmd={updateSelection} btnState={0} />
+            <NavButton icon={"../public/resources/icons/dashboard.png"} btnCmd={updateSelection} btnState={1} />
           </nav>
 
           <div id="workspace">

@@ -33,7 +33,7 @@ html {
 }
 
 body {
-  background: url("test_background.jpg");
+  background: url("../public/resources/images/test_background.jpg");
 }
 
 .wrapper {

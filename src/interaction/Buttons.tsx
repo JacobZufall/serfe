@@ -2,7 +2,7 @@ import React from "react";
 import "./Buttons.css"
 
 interface NavButtonProps {
-    icon: any;
+    icon: string;
     btnCmd: (btnState: number) => void;
     btnState: number;
 }
@@ -10,7 +10,7 @@ interface NavButtonProps {
 
 /**
  * Basic navigation button to flip between workspaces.
- * @param buttonText The text displayed on the button.
+ * @param buttonText The icon to display on the button.
  * @param btnCmd The function ran when the button is pressed.
  * @param btnState The workspace switched to when the button is pressed.
  * @constructor
