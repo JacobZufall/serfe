@@ -2,8 +2,14 @@ import React, {useState} from "react";
 
 import "./App.css";
 
+// Workspaces
 import Dashboard from "./workspaces/Dashboard";
+import Journal from "./workspaces/Journal";
 import TrialBalance from "./workspaces/TrialBalance";
+import BalanceSheet from "./workspaces/BalanceSheet";
+import IncomeStatement from "./workspaces/IncomeStatement";
+
+// Interactive Elements
 import NavButton from "./interaction/Buttons";
 
 
@@ -22,7 +28,22 @@ function Workspace({newSelection}: WorkspaceProps): React.JSX.Element {
   switch (newSelection) {
     case 1:
       return (
+          <Journal />
+      );
+
+    case 2:
+      return (
           <TrialBalance />
+      );
+
+    case 3:
+      return (
+          <BalanceSheet />
+      );
+
+    case 4:
+      return (
+          <IncomeStatement />
       );
 
     // For safety, we'll default to the dashboard, which should be thought of as "case 0".
@@ -55,8 +76,35 @@ function App(): React.JSX.Element {
       <body>
         <div className="wrapper">
           <nav>
-            <NavButton icon={"../public/resources/icons/dashboard.png"} btnCmd={updateSelection} btnState={0} />
-            <NavButton icon={"../public/resources/icons/dashboard.png"} btnCmd={updateSelection} btnState={1} />
+            <NavButton
+                icon={"../public/resources/icons/dashboard.png"}
+                btnCmd={updateSelection}
+                btnState={0}
+            />
+
+            <NavButton
+                icon={"../public/resources/icons/dashboard.png"}
+                btnCmd={updateSelection}
+                btnState={1}
+            />
+
+            <NavButton
+                icon={"../public/resources/icons/dashboard.png"}
+                btnCmd={updateSelection}
+                btnState={2}
+            />
+
+            <NavButton
+                icon={"../public/resources/icons/dashboard.png"}
+                btnCmd={updateSelection}
+                btnState={3}
+            />
+
+            <NavButton
+                icon={"../public/resources/icons/dashboard.png"}
+                btnCmd={updateSelection}
+                btnState={4}
+            />
           </nav>
 
           <div id="workspace">

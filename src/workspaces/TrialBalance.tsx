@@ -1,9 +1,9 @@
-import React from "react"
+import React from "react";
 
 // I don't know if this will be a trial balance yet, but it can be refactored.
 function TrialBalance(): React.JSX.Element {
     return (
-        <h1>TrialBalance</h1>
+        <h1>Trial Balance</h1>
     );
 }
 
